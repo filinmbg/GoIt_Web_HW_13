@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "goit-web-hw-12"
+version = "0.1.0"
+description = ""
+authors = ["filinmbg <filinmbg@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.105.0"
+uvicorn = "^0.24.0.post1"
+fastapi-jwt-auth = "^0.5.0"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+sqlalchemy = "^2.0.23"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-multipart = "^0.0.6"
+psycopg2 = "^2.9.9"
+pydantic = {extras = ["email"], version = "^2.5.2"}
+alembic = "^1.13.0"
+config = "^0.5.1"
+libgravatar = "^1.0.4"
+jss-python = "^1.0.1"
+python-dotenv = "^1.0.0"
+fastapi-mail = "^1.4.1"
+redis = "^4.5.1"
+cloudinary = "^1.37.0"
+pytest = "^7.4.3"
+pytest-mock = "^3.12.0"
+pytest-cov = "^4.1.0"
+ratelimiter = "^1.2.0.post0"
+fastapi-limiter = "^0.1.5"
+
+
+[tool.poetry.group.dev.dependencies]
+sphinx = "^7.2.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
