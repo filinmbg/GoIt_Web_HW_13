@@ -1,9 +1,7 @@
 from datetime import datetime, timedelta
 from typing import Optional
 
-# import pickle
 
-# import redis as redis
 from fastapi import Depends, HTTPException, status
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordBearer

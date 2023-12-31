@@ -35,18 +35,6 @@ async def get_user(user_id: int, db: Session) -> Type[User] | None:
     return db.query(User).filter(User.id == user_id).first()
 
 
-# Тепер контакт додається тільки під час SignUp
-# async def create_user_by_user(body: UserModel, db: Session) -> User:
-#     contacts = db.query(Contact).filter(Contact.id.in_(body.contacts)).all()
-#     user = User(name=body.name, last_name=body.last_name, day_of_born=body.day_of_born, email=body.email,
-#                 description=body.description, contacts=contacts)
-#     db.add(user)
-#     db.commit()
-#     db.refresh(user)
-#     return user
-# ---------------
-
-
 async def remove_user(user_id: int, db: Session, user: User) -> User | None:
     """
     The remove_user function removes a user from the database.
